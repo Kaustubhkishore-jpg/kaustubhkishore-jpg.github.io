@@ -16,28 +16,30 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="dist/css/styles.css" rel="stylesheet" />
        <style>
-           .dog-popup {
+ #walking-dog {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 30px;
+    left: -200px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+#walking-dog img {
+    width: 150px;
+}
+.dog-message {
     background: #222;
     color: white;
-    padding: 15px;
+    padding: 10px 15px;
     border-radius: 15px;
-    text-align: center;
-    display: none;
-    animation: fadeIn 0.5s ease;
-    z-index: 9999;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
 }
 
-.dog-popup img {
-    width: 120px;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
         .custom-divider 
  {
     display: flex;
@@ -670,21 +672,27 @@ function typeEffect() {
 
 typeEffect();
 </script>
-<script>
+
+<div id="walking-dog">
+    <img src="https://media.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif" alt="Walking Dog">
+    <div class="dog-message">Welcome
+        <script>
 function funnyAnimation() {
-
-    let dog = document.getElementById("dog-popup");
-
-    dog.style.display = "block";
-
+    let dog = document.getElementById("walking-dog");
+    dog.style.left = "-200px";
+    dog.style.transition = "none";
     setTimeout(() => {
-        dog.style.display = "none";
+        dog.style.transition = "left 6s linear";
+        dog.style.left = "110%";}, 50);
+   let msg = dog.querySelector(".dog-message");
+  msg.style.opacity = "1";
+ setTimeout(() => {
+        msg.style.opacity = "0";
     }, 4000);
 }
 </script>
-<div id="dog-popup" class="dog-popup">
-    <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" alt="Dog">
-    <p>🐶 Welcome to my portfolio!</p>
+to my portfolio! 🐾</div>
 </div>
+
     </body>
 </html>
