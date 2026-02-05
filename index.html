@@ -16,7 +16,29 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="dist/css/styles.css" rel="stylesheet" />
        <style>
-         .custom-divider 
+           .dog-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #222;
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    display: none;
+    animation: fadeIn 0.5s ease;
+    z-index: 9999;
+}
+
+.dog-popup img {
+    width: 120px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+        .custom-divider 
  {
     display: flex;
     align-items: center;
@@ -651,11 +673,18 @@ typeEffect();
 <script>
 function funnyAnimation() {
 
-    alert("👋 Hello There! Welcome to My Portfolio 😄");
+    let dog = document.getElementById("dog-popup");
 
+    dog.style.display = "block";
+
+    setTimeout(() => {
+        dog.style.display = "none";
+    }, 4000);
 }
 </script>
-
-
+<div id="dog-popup" class="dog-popup">
+    <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" alt="Dog">
+    <p>🐶 Welcome to my portfolio!</p>
+</div>
     </body>
 </html>
