@@ -88,11 +88,6 @@ body.dark-mode .btn {
 body.dark-mode #typing-text {
   color: inherit !important;
 }
-
-#walking-dog img {
-    width: 150px;
-}
-/* YOO HALLOOO button */
 .yo-btn {
   background: none;
   border: none;
@@ -108,24 +103,23 @@ body.dark-mode #typing-text {
   bottom: 30px;
   left: -200px;
   display: none;
-  z-index: 9999;
+  z-index: 99999;
 }
 
-/* Dog image */
 #walking-dog img {
   width: 120px;
 }
 
-/* Dog message */
 .dog-message {
   position: absolute;
-  left: 130px;
-  top: 20px;
-  color: #fff;
-  font-size: 18px;
+  top: -40px;
+  left: 0;
+  color: white;
+  font-weight: bold;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.5s;
 }
+
       .custom-divider 
  {
     display: flex;
@@ -810,7 +804,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 </script
-        <script>
+    <script>
 function funnyAnimation() {
   const dog = document.getElementById("walking-dog");
   const msg = dog.querySelector(".dog-message");
@@ -818,26 +812,22 @@ function funnyAnimation() {
   dog.style.display = "block";
   dog.style.left = "-200px";
   dog.style.transition = "none";
+  msg.style.opacity = "1";
 
   setTimeout(() => {
     dog.style.transition = "left 6s linear";
     dog.style.left = "110%";
   }, 50);
 
-  msg.style.opacity = "1";
-
   setTimeout(() => {
     msg.style.opacity = "0";
-    dog.style.display = "none";
   }, 6000);
 }
 
-document
-  .getElementById("yooHallooBtn")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-    funnyAnimation();
-  });
+document.getElementById("yooHallooBtn").addEventListener("click", function (e) {
+  e.preventDefault();
+  funnyAnimation();
+});
 </script>
 <!-- DOG ANIMATION (GLOBAL OVERLAY) -->
 <div id="walking-dog">
