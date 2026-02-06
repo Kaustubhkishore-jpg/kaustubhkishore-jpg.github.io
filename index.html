@@ -242,8 +242,7 @@ body.dark-mode #typing-text {
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a href="#" id="yooHallooBtn" class="nav-link">YOO HALLOOO!</a>
-
+                <button id="yoHalloo" class="yo-btn">YOO HALLOOO!</button>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -755,20 +754,7 @@ function funnyAnimation() {
     }, 6000);
 }
 </script>
-               <script>
-  document.getElementById("yooHallooBtn").addEventListener("click", function (e) {
-    e.preventDefault(); // stop page jump
-
-    const dog = document.getElementById("dog-walker");
-    if (!dog) return;
-
-    // restart animation
-    dog.classList.remove("walk");
-    void dog.offsetWidth; // reflow trick
-    dog.classList.add("walk");
-  });
-</script>
-
+                    
 <script>
 function toggleTheme() {
   const body = document.body;
@@ -799,5 +785,10 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 </script>
+ <button id="yooHallooBtn" class="yo-btn">YOO HALLOOO!</button>
+<div id="walking-dog">
+  <img src="dog.gif.gif" alt="Walking Dog">
+  <div class="dog-message">Welcome to my portfolio! 🐾</div>
+</div>
     </body>
 </html>
