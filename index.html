@@ -745,6 +745,7 @@ function toggleTheme() {
 window.addEventListener("DOMContentLoaded", () => {
   const savedTheme = localStorage.getItem("theme");
   const button = document.getElementById("theme-toggle");
+
   if (savedTheme === "light") {
     document.body.classList.add("light-mode");
     button.textContent = "🌙";
