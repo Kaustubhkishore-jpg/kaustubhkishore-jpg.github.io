@@ -355,6 +355,42 @@ body.light-mode .nav-btn:hover {
 #education p {
   color: #ffffff !important;
 }
+/* ===== Glowing divider for Education ===== */
+#education .divider-custom-line {
+  background: linear-gradient(90deg, #00ffe5, #00aaff, #00ffe5);
+  height: 4px;
+  width: 120px;
+  border-radius: 10px;
+  background-size: 200% auto;
+  animation: eduGlowMove 3s linear infinite;
+  box-shadow: 0 0 10px #00ffe5, 0 0 20px #00aaff;
+}
+
+#education .divider-custom-icon i {
+  color: #ffd700; /* gold cap */
+  font-size: 28px;
+  filter: drop-shadow(0 0 6px #ffd700)
+          drop-shadow(0 0 14px #ffcc00);
+  animation: eduIconPulse 2.5s ease-in-out infinite;
+}
+/* ===== Animations ===== */
+@keyframes eduGlowMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+@keyframes eduIconPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 6px #ffd700);
+  }
+  50% {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 14px #ffd700)
+            drop-shadow(0 0 28px #ffcc00);
+  }
+}
+
 </style>
     </head>
     <body id="page-top">
