@@ -57,7 +57,7 @@ body.loading .custom-pill-nav {
   border-radius: 0;          /* 🔴 important */
   box-shadow: none;          /* 🔴 important */
 
-  z-index: 9999;
+  z-index: 1030;
 }
 /* Navbar links */
 .custom-pill-nav .nav-link,
@@ -936,6 +936,22 @@ body.light-mode .nav-btn:hover {
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <!-- FIX: Hide navbar when modal opens -->
+<script>
+  const navbar = document.querySelector('.custom-pill-nav');
+document.querySelectorAll('.portfolio-item').forEach(item => {
+  item.addEventListener('click', () => {
+    document.querySelector('.custom-pill-nav').style.display = 'none';
+  });
+});
+
+document.querySelectorAll('.portfolio-modal').forEach(modal => {
+  modal.addEventListener('hidden.bs.modal', () => {
+    document.querySelector('.custom-pill-nav').style.display = 'block';
+  });
+});
+</script>
+
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
