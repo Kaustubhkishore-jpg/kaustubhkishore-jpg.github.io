@@ -406,20 +406,21 @@ body.light-mode .nav-btn:hover {
 /* Make portfolio item relative */
 .portfolio-card {
   position: relative;
+  height: 220px;          /* 🔴 IMPORTANT */
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 14px;
+  background: #ffffff;
 }
-
 /* Title inside box */
 .portfolio-box-title {
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 12px 0;
+  padding: 14px 0;
 
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.8),
     rgba(0, 0, 0, 0)
   );
 
@@ -428,18 +429,18 @@ body.light-mode .nav-btn:hover {
   font-weight: 600;
   text-align: center;
 
+  z-index: 3;              /* 🔴 VERY IMPORTANT */
   transform: translateY(100%);
   opacity: 0;
-
   transition: all 0.4s ease;
 }
+
 
 /* ✨ Animate on hover */
 .portfolio-card:hover .portfolio-box-title {
   transform: translateY(0);
   opacity: 1;
 }
-
 </style>
     </head>
     <body id="page-top">
