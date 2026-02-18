@@ -443,6 +443,27 @@ body.light-mode .nav-btn:hover {
 #contact .page-section-heading {
   color: #ffffff !important;
 }
+/* Gradient text for main heading */
+.masthead-heading {
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #00ffe5,
+    #00aaff,
+    #ffffff
+  );
+  background-size: 300% auto;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: nameGradientMove 6s linear infinite;
+}
+
+@keyframes nameGradientMove {
+  0% { background-position: 0% center; }
+  100% { background-position: 300% center; }
+}
 
 </style>
     </head>
