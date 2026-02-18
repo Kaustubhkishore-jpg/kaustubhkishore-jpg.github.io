@@ -323,12 +323,14 @@ body.dark-mode .navbar-pill {
   background: rgba(0, 0, 0, 0.55);
   border: 1px solid rgba(255,255,255,0.15);
 }
-
-/* Navbar Light Mode */
+/* Navbar Light Mode - GLASS */
 body.light-mode .navbar-pill {
-  background: rgba(255,255,255,0.9);
-  border: 1px solid rgba(0,0,0,0.1);
+  background: rgba(255, 255, 255, 0.55);  /* 🔥 lower opacity */
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
+
 /* ===== Shrink on scroll ===== */
 .navbar-pill.shrink {
   padding: 10px 28px;
