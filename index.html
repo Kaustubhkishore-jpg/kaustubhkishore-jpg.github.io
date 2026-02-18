@@ -18,28 +18,18 @@
        <style>
    /* HERO SECTION PURE BLACK */
 .hero-black {
-  background-color: #000000 !important;
+  background-color: inherit;
 }
-
    /* About section – match hero background */
 .about-section {
   background-color: #1e262c; /* same as hero */
   color: #ffffff;
 }
-html,
-body {
-  background-color: #000000 ;
-  margin: 0;
-  padding: 0;
-}
+
            body {
   padding-top: 130px;
 }
            /* Default = Dark Mode */
-body {
-  background-color: #000000;
-  color: #ffffff;
-}
 
 /* Light Mode */
 body.light-mode {
@@ -116,10 +106,10 @@ body.light-mode .custom-pill-nav .resume-btn {
   color: white;
 }
            /* ================== LIGHT MODE (DEFAULT) ================== */
-body {
+           body.light-mode {
   background-color: #ffffff;
   color: #000000;
-}
+           }
 .page-section {
   background-color: inherit;
 }
@@ -127,6 +117,10 @@ body {
   color: #000000;
 }
 /* ================== DARK MODE ================== */
+               body {
+  background-color: #000000;
+  color: #ffffff;
+               }
 body.dark-mode .page-section {
   background-color: #000000;
 }
@@ -324,6 +318,18 @@ body.dark-mode #typing-text {
   margin: 0 auto;
   transition: all 0.35s ease;
 }
+           /* Navbar Dark Mode */
+body.dark-mode .navbar-pill {
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* Navbar Light Mode */
+body.light-mode .navbar-pill {
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
 /* Light mode */
 body.light-mode .navbar-pill {
   background: rgba(255, 255, 255, 0.75);
