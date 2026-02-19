@@ -131,12 +131,6 @@ body.dark-mode .page-section-heading {
 #typing-text {
   color: #1abc9c !important;
 }
-/* Portfolio cards FIX */
-body.dark-mode .portfolio-item {
-  background-color: #ffffff;
-  border-radius: 12px;
-  padding: 10px;
-}
 /* Contact form FIX */
 body.dark-mode .form-control {
   background-color: #ffffff;
@@ -422,14 +416,9 @@ body.light-mode .nav-btn:hover {
 }
 /* PORTFOLIO CARD BASE */
 .portfolio-card {
-  position: relative;
-  padding: 40px;
-  border-radius: 20px;
-  min-height: 260px;
-
-  display: block;        /* 🔥 REMOVE FLEX */
-  text-align: left;
+  width: 100%;
 }
+
 .portfolio-content {
   width: 100%;
 }
@@ -545,6 +534,15 @@ body.light-mode .portfolio-tag {
   background: rgba(0, 102, 255, 0.1);
   color: #0066ff;
 }
+  #portfolio .row {
+  align-items: stretch;
+}
+
+#portfolio .col-md-6,
+#portfolio .col-lg-4 {
+  display: flex;
+}
+         
 </style>
     </head>
     <body id="page-top">
