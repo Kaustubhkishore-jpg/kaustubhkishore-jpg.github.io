@@ -423,17 +423,21 @@ body.light-mode .nav-btn:hover {
 /* PORTFOLIO CARD BASE */
 .portfolio-card {
   position: relative;
-  padding: 40px;                /* 🔥 Bigger padding */
+  padding: 40px;
   border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.35s ease;
-  overflow: hidden;
-  min-height: 260px;            /* 🔥 Make box BIG */
+  min-height: 260px;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
+  justify-content: flex-start;   /* 🔥 IMPORTANT */
+  align-items: flex-start;       /* 🔥 IMPORTANT */
 
+  text-align: left;              /* 🔥 FORCE LEFT ALIGN */
+}
+ .portfolio-content {
+  width: 100%;
+  text-align: left;
+}
 /* DARK MODE CARD */
 body.dark-mode .portfolio-card {
   background: rgba(18, 18, 18, 0.85);
@@ -467,8 +471,7 @@ body.light-mode .portfolio-card {
 
 /* Text */
 .portfolio-content h4 {
-  font-size: 1.6rem;             /* 🔥 Bigger title */
-  font-weight: 600;
+  margin-top: 0;
   margin-bottom: 12px;
 }
  body.dark-mode .portfolio-content h4 {
