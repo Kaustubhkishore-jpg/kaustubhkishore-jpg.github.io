@@ -427,17 +427,22 @@ body.light-mode .nav-btn:hover {
   border-radius: 20px;
   min-height: 260px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;   /* 🔥 IMPORTANT */
-  align-items: flex-start;       /* 🔥 IMPORTANT */
-
-  text-align: left;              /* 🔥 FORCE LEFT ALIGN */
-}
- .portfolio-content {
-  width: 100%;
+  display: block;        /* 🔥 REMOVE FLEX */
   text-align: left;
 }
+.portfolio-content {
+  width: 100%;
+}
+
+.portfolio-content h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.portfolio-content p {
+  margin-bottom: 20px;
+}
+
 /* DARK MODE CARD */
 body.dark-mode .portfolio-card {
   background: rgba(18, 18, 18, 0.85);
