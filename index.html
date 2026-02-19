@@ -416,9 +416,14 @@ body.light-mode .nav-btn:hover {
 }
 /* PORTFOLIO CARD BASE */
 .portfolio-card {
-  width: 100%;
+  position: relative;
+  padding: 40px 40px 40px 50px;  /* 👈 extra left padding */
+  border-radius: 20px;
+  min-height: 260px;
+  text-align: left;
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
-
 .portfolio-content {
   width: 100%;
 }
@@ -452,17 +457,16 @@ body.light-mode .portfolio-card {
   border-color: rgba(0, 255, 200, 0.4);
   box-shadow: 0 15px 40px rgba(0, 255, 200, 0.15);
 }
-           .portfolio-card::before {
+ .portfolio-card::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 0;
-  height: 100%;
-  width: 6px;                    /* 🔥 Thicker line */
+  top: 20px;            /* 👈 NOT full height */
+  bottom: 20px;
+  width: 6px;
   background: linear-gradient(to bottom, #00ffe5, #0066ff);
-  border-radius: 6px 0 0 6px;
+  border-radius: 6px;
 }
-
 /* Text */
 .portfolio-content h4 {
   margin-top: 0;
@@ -533,16 +537,7 @@ body.dark-mode .portfolio-tag {
 body.light-mode .portfolio-tag {
   background: rgba(0, 102, 255, 0.1);
   color: #0066ff;
-}
-  #portfolio .row {
-  align-items: stretch;
-}
-
-#portfolio .col-md-6,
-#portfolio .col-lg-4 {
-  display: flex;
-}
-         
+}        
 </style>
     </head>
     <body id="page-top">
