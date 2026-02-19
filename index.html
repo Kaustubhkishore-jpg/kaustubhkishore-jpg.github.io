@@ -461,11 +461,11 @@ body.light-mode .portfolio-card {
   content: "";
   position: absolute;
   left: 0;
-  top: 30px;
-  bottom: 30px;
+  top: 0;
+  height: 100%;
   width: 6px;
-  border-radius: 10px;
-  background: linear-gradient(180deg, #00ffe5, #0066ff);
+  background: linear-gradient(to bottom, #00ffe5, #0066ff);
+  border-radius: 20px 0 0 20px; /* match card radius */
 }
 #portfolio .col-md-6,
 #portfolio .col-lg-4 {
