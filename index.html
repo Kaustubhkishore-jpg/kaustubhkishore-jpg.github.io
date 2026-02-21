@@ -541,7 +541,21 @@ body.light-mode .portfolio-tag {
     #portfolio .col-12 {
   margin-bottom: 100px;
 }
-    .work-role {
+   .work-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* prevents breaking on small screens */
+}
+
+.work-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.work-role {
   flex: 1;
   text-align: center;
   font-weight: 600;
@@ -551,6 +565,11 @@ body.light-mode .portfolio-tag {
   font-weight: 500;
   opacity: 0.8;
   margin-left: 10px;
+}
+
+.work-location {
+  font-weight: 600;
+  text-align: right;
 }
 </style>
     </head>
@@ -703,17 +722,24 @@ body.light-mode .portfolio-tag {
 
       <div class="portfolio-content">
           
-        <h4>Work Experience   Duliajan/Tinsukia</h4>
-
-<div class="work-role">
-   <h6> Probationary Trainee at Chartered Accountancy Firm
-    <span class="work-date">(January 24 – April 25)</span></h6>
-  </div>
+       
           
         <p>Assisted in Monthly GST return preparation and filings, ensuring accuracy and compliance with
 statutory deadlines</p>
           <p>Maintained and prepared books of accounts using standards accounting principles and software
-tools</p>
+tools</p><div class="work-header">
+  <h4 class="work-title">Work Experience</h4>
+
+  <div class="work-role">
+    Probationary Trainee at Chartered Accountancy Firm
+    <span class="work-date">(January 24 – April 25)</span>
+  </div>
+
+  <div class="work-location">
+    Duliajan/Tinsukia
+  </div>
+</div>
+
           <p>Participated in routine accounting operations, including data entry, voucher verification, and ledger
 management </p>
           <p>Supported Income Tax computation, TDS reconciliation, and preparation of related financial
