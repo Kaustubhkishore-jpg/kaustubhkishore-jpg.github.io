@@ -567,26 +567,47 @@ body.light-mode .portfolio-content p {
 .work-location {
   font-weight: 600;
 }
-           /* Certificate Carousel Styling */
-.certificate-content {
-  text-align: left;
-  padding: 10px 10px 40px 10px;
+      /* Layout for certificate */
+.certificate-layout {
+  display: flex;
+  gap: 30px;
+  align-items: center;
 }
 
-.certificate-content h5 {
+/* Certificate image */
+.certificate-image img {
+  width: 220px;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Certificate details */
+.certificate-details h5 {
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.certificate-content p {
+.certificate-details p {
   margin-bottom: 6px;
   opacity: 0.9;
 }
 
-/* Make arrows white in dark mode */
-body.dark-mode .carousel-control-prev-icon,
-body.dark-mode .carousel-control-next-icon {
-  filter: invert(1);
+/* Controls styling */
+.certificate-controls {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+body.dark-mode .certificate-controls .btn {
+  border-color: rgba(255,255,255,0.3);
+  color: #ffffff;
+}
+
+body.dark-mode .certificate-controls .btn:hover {
+  background: #00aaff;
+  border-color: #00aaff;
 }
 
 </style>
@@ -807,6 +828,7 @@ body.dark-mode .carousel-control-next-icon {
       </div>
     </div>
   <!-- Certificates -->
+<!-- Certificates -->
 <div class="row mb-4">
   <div class="col-12">
     <div class="portfolio-card">
@@ -819,43 +841,55 @@ body.dark-mode .carousel-control-next-icon {
 
           <!-- Certificate 1 -->
           <div class="carousel-item active">
-            <div class="certificate-content">
-              <h5>Financial Modeling Certification</h5>
-              <p><strong>Issued by:</strong> Coursera</p>
-              <p><strong>Credential ID:</strong> ABC123456</p>
+            <div class="certificate-layout">
+
+              <!-- Left: Image -->
+              <div class="certificate-image">
+                <img src="dist/assets/certificate1.jpg" alt="Certificate">
+              </div>
+
+              <!-- Right: Details -->
+              <div class="certificate-details">
+                <h5>Financial Modeling Certification</h5>
+                <p><strong>Issued by:</strong> Coursera</p>
+                <p><strong>Credential ID:</strong> ABC123456</p>
+              </div>
+
             </div>
           </div>
 
           <!-- Certificate 2 -->
           <div class="carousel-item">
-            <div class="certificate-content">
-              <h5>Digital Marketing Certification</h5>
-              <p><strong>Issued by:</strong> Google</p>
-              <p><strong>Credential ID:</strong> XYZ987654</p>
+            <div class="certificate-layout">
+              <div class="certificate-image">
+                <img src="dist/assets/certificate2.jpg" alt="Certificate">
+              </div>
+              <div class="certificate-details">
+                <h5>Digital Marketing Certification</h5>
+                <p><strong>Issued by:</strong> Google</p>
+                <p><strong>Credential ID:</strong> XYZ987654</p>
+              </div>
             </div>
           </div>
-
-          <!-- Certificate 3 -->
-          <div class="carousel-item">
-            <div class="certificate-content">
-              <h5>Advanced Excel Certification</h5>
-              <p><strong>Issued by:</strong> Udemy</p>
-              <p><strong>Credential ID:</strong> EXL567890</p>
-            </div>
-          </div>
-
-          <!-- Add more certificates same way -->
 
         </div>
 
-        <!-- Navigation Buttons -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#certificateCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </button>
+        <!-- Controls INSIDE CARD -->
+        <div class="certificate-controls">
+          <button class="btn btn-outline-light btn-sm"
+                  type="button"
+                  data-bs-target="#certificateCarousel"
+                  data-bs-slide="prev">
+            ◀ Previous
+          </button>
 
-        <button class="carousel-control-next" type="button" data-bs-target="#certificateCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </button>
+          <button class="btn btn-outline-light btn-sm"
+                  type="button"
+                  data-bs-target="#certificateCarousel"
+                  data-bs-slide="next">
+            Next ▶
+          </button>
+        </div>
 
       </div>
 
