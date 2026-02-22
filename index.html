@@ -567,6 +567,28 @@ body.light-mode .portfolio-content p {
 .work-location {
   font-weight: 600;
 }
+           /* Certificate Carousel Styling */
+.certificate-content {
+  text-align: left;
+  padding: 10px 10px 40px 10px;
+}
+
+.certificate-content h5 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.certificate-content p {
+  margin-bottom: 6px;
+  opacity: 0.9;
+}
+
+/* Make arrows white in dark mode */
+body.dark-mode .carousel-control-prev-icon,
+body.dark-mode .carousel-control-next-icon {
+  filter: invert(1);
+}
+
 </style>
     </head>
     <body id="page-top">
@@ -784,16 +806,63 @@ body.light-mode .portfolio-content p {
         </div>
       </div>
     </div>
+  <!-- Certificates -->
+<div class="row mb-4">
+  <div class="col-12">
+    <div class="portfolio-card">
 
-    <!-- Certificates -->
-    <div class="row mb-4">
-      <div class="col-12">
-        <div class="portfolio-card">
-          <h4>Certificates & Job Stimulations</h4>
-          <p>Financial & Marketing Models</p>
+      <h4 class="work-title mb-4">Certificates</h4>
+
+      <div id="certificateCarousel" class="carousel slide" data-bs-ride="false">
+        
+        <div class="carousel-inner">
+
+          <!-- Certificate 1 -->
+          <div class="carousel-item active">
+            <div class="certificate-content">
+              <h5>Financial Modeling Certification</h5>
+              <p><strong>Issued by:</strong> Coursera</p>
+              <p><strong>Credential ID:</strong> ABC123456</p>
+            </div>
+          </div>
+
+          <!-- Certificate 2 -->
+          <div class="carousel-item">
+            <div class="certificate-content">
+              <h5>Digital Marketing Certification</h5>
+              <p><strong>Issued by:</strong> Google</p>
+              <p><strong>Credential ID:</strong> XYZ987654</p>
+            </div>
+          </div>
+
+          <!-- Certificate 3 -->
+          <div class="carousel-item">
+            <div class="certificate-content">
+              <h5>Advanced Excel Certification</h5>
+              <p><strong>Issued by:</strong> Udemy</p>
+              <p><strong>Credential ID:</strong> EXL567890</p>
+            </div>
+          </div>
+
+          <!-- Add more certificates same way -->
+
         </div>
+
+        <!-- Navigation Buttons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#certificateCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#certificateCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+
       </div>
+
     </div>
+  </div>
+</div>
+
 
     <!-- Skills -->
     <div class="row mb-4">
