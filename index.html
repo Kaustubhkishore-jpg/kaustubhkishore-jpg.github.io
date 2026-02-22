@@ -516,28 +516,55 @@ body.light-mode .portfolio-content p {
   0% { background-position: 0% center; }
   100% { background-position: 300% center; }
 }
-.portfolio-tags {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
+/* ===== PREMIUM ANIMATED TAGS ===== */
 .portfolio-tag {
-  padding: 8px 18px;
+  position: relative;
+  padding: 10px 22px;
   border-radius: 999px;
   font-size: 0.85rem;
   font-weight: 500;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  overflow: hidden;
 }
 
+/* Dark Mode Base */
 body.dark-mode .portfolio-tag {
-  background: rgba(0, 102, 255, 0.15);
+  background: rgba(0, 132, 255, 0.15);
   color: #00aaff;
+  border: 1px solid rgba(0, 170, 255, 0.4);
 }
 
-body.light-mode .portfolio-tag {
-  background: rgba(0, 102, 255, 0.1);
-  color: #0066ff;
+/* Glow Hover Effect */
+body.dark-mode .portfolio-tag:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(90deg, #0066ff, #00c6ff);
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 170, 255, 0.6),
+              0 0 30px rgba(0, 170, 255, 0.3);
 }
+
+/* Shine Animation */
+.portfolio-tag::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.4),
+    transparent
+  );
+  transition: 0.6s;
+}
+
+.portfolio-tag:hover::before {
+  left: 100%;
+}
+
 .work-header {
   margin-bottom: 20px;
 }
@@ -816,9 +843,6 @@ body.light-mode .portfolio-tag {
 
   </div>
 </section>
-
-
-      
         <!-- Contact Section-->
         <section class="page-section" id="contact">
             <div class="container">
